@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -12,7 +13,7 @@
         </a>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Главная</a>
+            <a class="main-nav__link  main-nav__link-current" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">О Седоне</a>
@@ -33,7 +34,7 @@
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__item" href="#">Хочу сюда!</a>
+            <a class="user-list__item user-list__button button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -41,12 +42,12 @@
     <main>
       <section class="hero">
         <h1>Седона - туристический городок в Аризоне</h1>
-        <img class="hero__img" src="images/hero-image.jpg" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon is sucks!" width="1200" height="485">
+        <img class="hero__image" src="images/hero-image.jpg" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon is sucks!" width="1200" height="485">
         <p class="hero__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="hero__desc">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
       <section class="attractions">
         <h2>Наши достопримечательности</h2>
+        <p class="attractions__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="attractions__list">
           <li class="attractions__item">
             <div class="attractions__column">
@@ -107,15 +108,15 @@
           <b>Заинтересовались?</b>
         </p>
         <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search__link" href="#">Поиск гостиницы в Седоне</a>
+        <a class="search__link button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
         <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
-          <button class="subscribe__button" type="submit">Подписаться</button>
+          <label class="visually-hidden" for="email">Email</label>
+          <input class="subscribe__input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+          <button class="subscribe__button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
