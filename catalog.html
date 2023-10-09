@@ -2,23 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav__logo-link" href="index.html">
-          <img class="main-nav__logo" src="#" alt="Логотип городка Седона." width="140" height="70">
+          <img class="main-nav__logo" src="images/logo.svg" alt="Логотип городка Седона." width="140" height="70">
         </a>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">О Седоне</a>
+            <a class="main-nav__link" href="#">О Седоне</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Гостиницы</a>
+            <a class="main-nav__link  main-nav__link-current" href="#">Гостиницы</a>
           </li>
         </ul>
         <ul class="user-list">
@@ -33,7 +34,7 @@
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__item" href="#">Хочу сюда!</a>
+            <a class="user-list__item user-list__button button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -103,20 +104,22 @@
               </ul>
             </fieldset>
             <fieldset class="form__price">
-              <legend>Стоимость, ₽:</legend>
-              <label class="form__label">
-                <input class="form__input-price" type="text" placeholder="от">
+              <legend class="form__title">Стоимость, ₽:</legend>
+              <label class="form__label form__price-label">
+                от
+                <input class="form__input-price" type="text" placeholder="0">
               </label>
-              <label class="form__label">
-                <input class="form__input-price" type="text" placeholder="до">
+              <label class="form__label form__price-label">
+                до
+                <input class="form__input-price" type="text" placeholder="9000">
               </label>
               <div class="form__range">
                 <button class="form__range-control" type="button"></button>
                 <button class="form__range-control" type="button"></button>
               </div>
             </fieldset>
-            <button class="form__button" type="submit">Применить</button>
-            <button class="form__button" type="button">Сбросить</button>
+            <button class="form__button button" type="submit">Применить</button>
+            <button class="form__button-reset" type="button">Сбросить</button>
           </form>
         </section>
       </div>
@@ -124,7 +127,7 @@
         <h2 class="visually-hidden">Найденные гостиницы</h2>
         <div class="hotels__wrap">
           <p class="hotels__text">Найдено гостиниц: 38</p>
-          <div>
+          <div class="hotels__column">
             <select class="hotels__select" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
               <option value="popular">Сначала популярные</option>
@@ -154,15 +157,17 @@
             <h2 class="hotels__item-title">
               <a class="hotels__title-link" href="#">Amara Resort & Spa</a>
             </h2>
-            <img src="#" alt="Вид из каньона на звёздное небо." width="300" height="212">
+            <a class="hotels__img-link" href="#">
+              <img src="images/hotel-1.jpg" alt="Вид из каньона на звёздное небо." width="300" height="212">
+            </a>
             <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 4000 ₽</span></p>
             <p class="hotels__item-wrap">
-              <a class="hotels__item-link" href="#">Подробнее</a>
-              <button class="hotels__item-button" type="button">В избранное</button>
+              <a class="hotels__item-link button details-button" href="#">Подробнее</a>
+              <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
             </p>
             <div class="hotels__item-rate">
               <p class="hotels__rate">
-                <span class="visually-hidden">Четыре звезды</span>
+                <span class="visually-hidden">Четырёхзвёздочная гостиница</span>
               </p>
               <p class="hotels__rate-desc">Рейтинг: 8,5</p>
             </div>
@@ -171,15 +176,17 @@
             <h2 class="hotels__item-title">
               <a class="hotels__title-link" href="#">Villas at Poco Diablo</a>
             </h2>
-            <img src="#" alt="Вид на каньон с радугой." width="300" height="212">
+            <a class="hotels__img-link" href="#">
+              <img src="images/hotel-2.jpg" alt="Вид на каньон с радугой." width="300" height="212">
+            </a>
             <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 5000 ₽</span></p>
             <p class="hotels__item-wrap">
-              <a class="hotels__item-link" href="#">Подробнее</a>
-              <button class="hotels__item-button hotels__item-favorite" type="button">В избранном</button>
+              <a class="hotels__item-link button details-button" href="#">Подробнее</a>
+              <button class="hotels__item-button button favorite-button favorite-button-checked" type="button">В избранном</button>
             </p>
             <div class="hotels__item-rate">
               <p class="hotels__rate">
-                <span class="visually-hidden">Четыре звезды</span>
+                <span class="visually-hidden">Четырёхзвёздочная гостиница</span>
               </p>
               <p class="hotels__rate-desc">Рейтинг: 8,5</p>
             </div>
@@ -188,15 +195,17 @@
             <h2 class="hotels__item-title">
               <a class="hotels__title-link" href="#">Desert Quail Inn</a>
             </h2>
-            <img src="#" alt="Вид на каньон на рассвете." width="300" height="212">
+            <a class="hotels__img-link" href="#">
+              <img src="images/hotel-3.jpg" alt="Вид на каньон на рассвете." width="300" height="212">
+            </a>
             <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 2500 ₽</span></p>
             <p class="hotels__item-wrap">
-              <a class="hotels__item-link" href="#">Подробнее</a>
-              <button class="hotels__item-button" type="button">В избранное</button>
+              <a class="hotels__item-link button details-button" href="#">Подробнее</a>
+              <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
             </p>
             <div class="hotels__item-rate">
               <p class="hotels__rate">
-                <span class="visually-hidden">Четыре звезды</span>
+                <span class="visually-hidden">Трёхзвёздочная гостиница</span>
               </p>
               <p class="hotels__rate-desc">Рейтинг: 8,5</p>
             </div>
@@ -205,15 +214,17 @@
             <h2 class="hotels__item-title">
               <a class="hotels__title-link" href="#">GreenTree Inn</a>
             </h2>
-            <img src="#" alt="Каньон на фоне звёздного неба." width="300" height="212">
+            <a class="hotels__img-link" href="#">
+              <img src="images/hotel-4.jpg" alt="Каньон на фоне звёздного неба." width="300" height="212">
+            </a>
             <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 1500 ₽</span></p>
             <p class="hotels__item-wrap">
-              <a class="hotels__item-link" href="#">Подробнее</a>
-              <button class="hotels__item-button" type="button">В избранное</button>
+              <a class="hotels__item-link button details-button" href="#">Подробнее</a>
+              <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
             </p>
             <div class="hotels__item-rate">
               <p class="hotels__rate">
-                <span class="visually-hidden">Четыре звезды</span>
+                <span class="visually-hidden">Двухзвёздочная гостиница</span>
               </p>
               <p class="hotels__rate-desc">Рейтинг: 8,5</p>
             </div>
@@ -238,12 +249,13 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe">
-        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-        <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="subscribe inner-subscribe">
+        <h2 class="subscribe__title inner-subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe__text inner-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
-          <button class="subscribe__button" type="submit">Подписаться</button>
+          <label class="visually-hidden" for="email">Email</label>re
+          <input class="subscribe__input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+          <button class="subscribe__button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -267,7 +279,7 @@
       </ul>
       <a class="phone" href="tel:+781281212">+7 (812) 812-12-12</a>
       <a class="copyright" href="https://htmlacademy.ru/">
-        <img class="copyright__img" src="#" alt="Логотип HTML Academy." width="115" height="33">
+        <img class="copyright__img" src="images/htmlacademy-logo.svg" alt="Логотип HTML Academy." width="115" height="33">
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </footer>
