@@ -31,6 +31,17 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-family: inherit;
   font-size: 20px;
@@ -52,6 +63,7 @@ body {
 }
 
 .main-nav {
+  padding: 0 70px;
   display: flex;
 }
 
@@ -102,17 +114,25 @@ body {
 }
 
 .hero {
+  margin-bottom: 69px;
   background-image: url('../images/index-background.jpg');
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #82b3d3;
 }
 
 .hero__image {
   margin: 0 auto;
-  margin-bottom: 151px;
+  padding-top: 51px;
+  padding-bottom: 80px;
   display: block;
 }
 
-.hero__slogan {
+.attractions {
+  margin-bottom: 64px;
+}
+
+.attractions__slogan {
   margin: 0 auto;
   margin-bottom: 25px;
   width: 620px;
@@ -122,10 +142,6 @@ body {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-}
-
-.attractions {
-  margin-bottom: 64px;
 }
 
 .attractions__text {
@@ -236,6 +252,7 @@ body {
 
 .features__list {
   margin: 0;
+  margin-bottom: 96px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +288,8 @@ body {
 }
 
 .search__lead {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -279,14 +298,24 @@ body {
 }
 
 .search__text {
+  margin: 0 auto;
+  margin-bottom: 54px;
+  width: 592px;
   text-align: center;
 }
 
 .search__link {
+  display: block;
+  margin: 0 auto;
+  width: 276px;
+  margin-bottom: 96px;
+  padding: 10px 50px;
   background-color: #756157;
 }
 
 .subscribe {
+  padding-top: 96px;
+  padding-bottom: 104px;
   background-color: #82b3d3;
   background-image: url(../images/subscribe-background.jpg);
   background-repeat: no-repeat;
@@ -294,6 +323,8 @@ body {
 }
 
 .subscribe__title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   color: #ffffff;
@@ -302,24 +333,39 @@ body {
 }
 
 .subscribe__text {
+  margin: 0 auto;
+  margin-bottom: 54px;
+  width: 475px;
   color: #ffffff;
   text-align: center;
 }
 
+.subscribe__form {
+  display: flex;
+  margin: 0 auto;
+  width: 684px;
+}
+
 .subscribe__input {
+  flex-grow: 1;
+  padding: 12px 20px;
   background-color: #f2f2f2;
+  border: none;
 }
 
 .subscribe__button {
+  padding: 0 50px;
   font-size: 20px;
   line-height: 36px;
   border: none;
+  border-radius: 0;
   cursor: pointer;
 }
 
 .page-footer {
   display: flex;
   justify-content: space-between;
+  padding: 40px 70px 30px;
 }
 
 .phone {
@@ -330,6 +376,7 @@ body {
 }
 
 .inner__wrap {
+  margin-bottom: 50px;
   padding-top: 35px;
   padding-left: 70px;
   padding-right: 70px;
@@ -489,6 +536,7 @@ body {
 
 .hotels__list {
   margin: 0;
+  margin-bottom: 80px;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -521,6 +569,11 @@ body {
   line-height: 21px;
 }
 
+.hotels__item-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .details-button {
   font-size: 16px;
   line-height: 20px;
@@ -538,6 +591,11 @@ body {
   background-color: #7db54f;
 }
 
+.hotels__item-rate {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hotels__rate-desc {
   font-size: 16px;
   line-height: 20px;
@@ -547,6 +605,7 @@ body {
 
 .hotels__pagination {
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
   list-style: none;
   display: flex;
