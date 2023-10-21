@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   width: 1200px;
   min-height: 100%;
+  box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -52,6 +53,7 @@ body {
   text-decoration: none;
   background-color: #82b3d3;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .main-nav__logo-link {
@@ -59,6 +61,8 @@ body {
 }
 
 .main-nav__logo {
+  position: relative;
+  z-index: 20;
   display: block;
 }
 
@@ -74,7 +78,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .main-nav__link {
@@ -94,7 +98,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   max-width: 400px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .user-list__link {
@@ -105,8 +109,29 @@ body {
   text-decoration: none;
 }
 
+.user-list__link {
+  display: block;
+  min-width: 44px;
+  min-height: 64px;
+}
+
 .user-list__button {
+  padding: 5px 50px;
   background-color: #756157;
+}
+
+.user-list__button:hover,
+.user-list__button:focus {
+  background-color: #615048;
+}
+
+.user-list__button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-list__button:disabled {
+  background-color: #e5e5e5;
 }
 
 .main-container {
@@ -114,7 +139,7 @@ body {
 }
 
 .hero {
-  margin-bottom: 69px;
+  margin-top: -5px;
   background-image: url('../images/index-background.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -129,7 +154,7 @@ body {
 }
 
 .attractions {
-  margin-bottom: 64px;
+  padding-top: 69px;
 }
 
 .attractions__slogan {
@@ -156,7 +181,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  list-style: none;
+  list-style-type: none;
 }
 
 .attractions__item {
@@ -201,7 +226,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
   background-color: #ffffff;
 }
 
@@ -232,6 +257,10 @@ body {
   text-align: center;
 }
 
+.features {
+  padding-top: 64px;
+}
+
 .features__slogan {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -252,11 +281,10 @@ body {
 
 .features__list {
   margin: 0;
-  margin-bottom: 96px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .features__item {
@@ -277,6 +305,10 @@ body {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.search {
+  padding: 96px 0;
 }
 
 .features__desc {
@@ -308,9 +340,22 @@ body {
   display: block;
   margin: 0 auto;
   width: 276px;
-  margin-bottom: 96px;
   padding: 10px 50px;
   background-color: #756157;
+}
+
+.search__link:hover,
+.search__link:focus {
+  background-color: #615048;
+}
+
+.search__link:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search__link:disabled {
+  background-color: #e5e5e5;
 }
 
 .subscribe {
@@ -365,7 +410,25 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 40px 70px 30px;
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  list-style-type: none;
+}
+
+.social__link {
+  display: block;
+  width: 47px;
+  height: 40px;
+  /* временное свойство */
+  background-color: #68a2ca;
 }
 
 .phone {
@@ -376,6 +439,7 @@ body {
 }
 
 .inner__wrap {
+  margin-top: -5px;
   margin-bottom: 50px;
   padding-top: 35px;
   padding-left: 70px;
@@ -400,7 +464,7 @@ body {
   margin-bottom: 40px;
   padding: 0;
   display: flex;
-  list-style: none;
+  list-style-type: none;
 }
 
 .breadcrumbs__item {
@@ -422,7 +486,7 @@ body {
 .form__list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .form__infrastructure {
@@ -523,6 +587,7 @@ body {
   padding: 14px 20px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .view__list {
@@ -531,7 +596,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  list-style: none;
+  list-style-type: none;
+}
+
+.view__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.view__item-button {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .hotels__list {
@@ -541,7 +618,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .hotels__item {
@@ -552,7 +629,13 @@ body {
   border-radius: 4px;
 }
 
+.hotels__item-title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
 .hotels__title-link {
+  display: block;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
@@ -561,26 +644,41 @@ body {
 
 .hotels__image-link {
   display: block;
+  margin-bottom: 16px;
   order: -1;
 }
 
+.hotels__image {
+  display: block;
+}
+
 .hotels__item-cost {
+  margin: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 18px;
   line-height: 21px;
 }
 
 .hotels__item-wrap {
+  margin: 0;
+  margin-bottom: 16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .details-button {
+  padding: 8px 22px;
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
 }
 
 .favorite-button {
+  padding: 8px 22px;
   font-size: 16px;
   line-height: 20px;
   border: none;
@@ -593,21 +691,26 @@ body {
 
 .hotels__item-rate {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .hotels__rate-desc {
+  margin: 0;
+  padding: 8px 24px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .hotels__pagination {
   margin: 0;
   margin-bottom: 60px;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
 }
 
