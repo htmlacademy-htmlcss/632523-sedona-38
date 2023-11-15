@@ -36,8 +36,8 @@
               <span class="user-list__fav-hotels">12</span>
             </a>
           </li>
-          <a class="user-list__button button" href="#">Хочу сюда!</a>
         </ul>
+        <a class="main-nav__button button" href="#">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-container">
@@ -50,14 +50,14 @@
         <p class="attractions__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="attractions__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="attractions__list">
-          <li class="attractions__item">
+          <li class="attractions__item attractions__item-hero">
             <div class="attractions__column">
               <h3 class="attractions__title">Настоящий городок</h3>
               <p class="attractions__desc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <img class="attractions__image" src="images/sedona-city.jpg" alt="Вид на городские здания Седоны." width="800" height="385">
           </li>
-          <li class="attractions__item attractions__item-bridge">
+          <li class="attractions__item attractions__item-hero attractions__item-bridge">
             <div class="attractions__column">
               <h3 class="attractions__title">Там есть <br>мост дьявола</h3>
               <p class="attractions__desc">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -65,20 +65,16 @@
             <img class="attractions__image" src="images/devils-bridge.jpg" alt="Панорама Моста дьявола." width="800" height="385">
           </li>
           <li class="attractions__item">
-            <ul class="add-attractions__list">
-              <li class="add-attractions__item">
-                <h4 class="add-attractions__title">Небольшая площадь</h4>
-                <p class="add-attractions__desc">Все достопримечательности находятся очень близко</p>
-              </li>
-              <li class="add-attractions__item">
-                <h4 class="add-attractions__title">Красивая дорога</h4>
-                <p class="add-attractions__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-              </li>
-              <li class="add-attractions__item">
-                <h4 class="add-attractions__title">Мало туристов</h4>
-                <p class="add-attractions__desc">Большинство едет в Гранд Каньон и толпится там</p>
-              </li>
-            </ul>
+            <h3 class="attractions__title">Небольшая площадь</h3>
+            <p class="attractions__desc">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="attractions__item">
+            <h3 class="attractions__title">Красивая дорога</h3>
+            <p class="attractions__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="attractions__item">
+            <h3 class="attractions__title">Мало туристов</h3>
+            <p class="attractions__desc">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
@@ -148,46 +144,57 @@
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </footer>
-    <div class="modal-container-closed">
-      <div class="modal modal-booking">
+    <div class="modal-closed">
+      <div class="modal-booking modal-container">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
+            <p class="booking__field-group">
               <label class="booking-form__label" for="arrival-date">Дата заезда:</label>
               <input class="booking-form__date" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
               <span class="booking-message booking-message-error">Мы не можем отправить вас в прошлое.</span>
             </p>
-            <p class="field-group">
+            <p class="booking__field-group">
               <label class="booking-form__label" for="departure-date">Дата выезда:</label>
               <input class="booking-form__date" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату">
               <span class="booking-message">На эти даты есть свободные номера. Пока есть.</span>
             </p>
-            <div class="booking-age-wrapper">
-              <label class="booking-form__label" for="adult">Взрослые:</label>
-              <div class="booking-form__age-input">
-                <button class="booking-form__remove-button" type="button">
-                  <span class="visually-hidden">Добавить гостя</span>
-                </button>
-                <input class="booking-form__age" type="number" id="adult" name="adult" placeholder="2">
-                <button class="booking-form__add-button" type="button">
-                  <span class="visually-hidden">Убрать гостя</span>
-                </button>
+            <div class="booking__age">
+              <div class="booking__age-wrapper">
+                <label class="booking-form__age-label booking-form__adult-label" for="adult">Взрослые:</label>
+                <div class="booking-form__age-input">
+                  <button class="booking-form__button booking-form__remove-button" type="button">
+                    <span class="visually-hidden">Добавить гостя</span>
+                  </button>
+                  <input class="booking-form__age" type="number" id="adult" name="adult" placeholder="2">
+                  <button class="booking-form__button booking-form__add-button" type="button">
+                    <span class="visually-hidden">Убрать гостя</span>
+                  </button>
+                </div>
               </div>
-              <label class="booking-form__label" for="kids">Дети:</label>
-              <div class="booking-form__age-input">
-                <button class="booking-form__remove-button" type="button">
-                  <span class="visually-hidden">Добавить гостя</span>
-                </button>
-                <input class="booking-form__age" type="number" id="kids" name="kids" placeholder="2">
-                <button class="booking-form__add-button" type="button">
-                  <span class="visually-hidden">Убрать гостя</span>
-                </button>
+              <div class="booking__age-wrapper">
+                <span class="booking-form__kids-label form-label-icon">
+                  <label class="booking-form__age-label booking-form__kids-label" for="kids">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle"aria-labelledby="tooltip-label-date" type="button"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="booking-form__age-input">
+                  <button class="booking-form__button booking-form__remove-button" type="button">
+                    <span class="visually-hidden">Добавить гостя</span>
+                  </button>
+                  <input class="booking-form__age" type="number" id="kids" name="kids" placeholder="2">
+                  <button class="booking-form__button booking-form__add-button" type="button">
+                    <span class="visually-hidden">Убрать гостя</span>
+                  </button>
+                </div>
               </div>
             </div>
+            <button class="booking__submit-button button" type="submit">Найти</button>
           </form>
         </section>
       </div>

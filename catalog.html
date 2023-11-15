@@ -21,7 +21,7 @@
             <a class="main-nav__link" href="#">О Седоне</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link-current" href="catalog.html">Гостиницы</a>
+            <a class="main-nav__link main-nav__link-current" href="#">Гостиницы</a>
           </li>
         </ul>
         <ul class="user-list">
@@ -36,8 +36,8 @@
               <span class="user-list__fav-hotels">12</span>
             </a>
           </li>
-          <a class="user-list__button button" href="#">Хочу сюда!</a>
         </ul>
+        <a class="main-nav__button button" href="#">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-container main-inner">
@@ -112,27 +112,32 @@
             </fieldset>
             <fieldset class="form__price">
               <legend class="form__title">Стоимость, ₽:</legend>
-              <div class="form__price-wrap">
-                <label class="form__price-label">
-                  <span>от</span>
-                  <input class="form__input-price form__input-min-price" type="number" placeholder="0">
-                </label>
-                <label class="form__price-label">
-                  <span>до</span>
-                  <input class="form__input-price form__input-max-price" type="number" placeholder="9000">
-                </label>
-              </div>
               <div class="form__range">
-                <div class="form__range-scale"></div>
-                <div class="form__range-bar" style="width: 226px;">
-                  <button class="form__range-toggle toggle-min" type="button"></button>
-                  <button class="form__range-toggle toggle-max" type="button"></button>
+                <div class="form__range-wrapper">
+                  <label class="form__range-label">
+                    <span>от</span>
+                    <input class="form__range-input form__range-min-price" type="number" placeholder="0">
+                  </label>
+                  <label class="form__range-label">
+                    <span>до</span>
+                    <input class="form__range-input form__range-max-price" type="number" placeholder="9000">
+                  </label>
+                </div>
+                <div class="form__range-scale" style="width: 288px;">
+                  <div class="form__range-bar" style="width: 226px;">
+                    <button class="form__range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="form__range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </fieldset>
             <p class="form__button-wrap">
               <button class="form__button form__button-submit button" type="submit">Применить</button>
-              <button class="form__button form__button-reset button" type="button">Сбросить</button>
+              <button class="form__button form__button-reset button" type="reset">Сбросить</button>
             </p>
           </form>
         </section>
@@ -174,7 +179,10 @@
             <a class="hotels__image-link" href="#">
               <img class="hotels__image" src="images/hotel-1.jpg" alt="Вид из каньона на звёздное небо." width="300" height="212">
             </a>
-            <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 4000 ₽</span></p>
+            <p class="hotels__item-cost">
+              <span>Гостиница</span>
+              <span class="hotels__item-price">От 4000 ₽</span>
+            </p>
             <p class="hotels__item-wrap">
               <a class="hotels__item-link button details-button" href="#">Подробнее</a>
               <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
@@ -193,7 +201,10 @@
             <a class="hotels__image-link" href="#">
               <img class="hotels__image" src="images/hotel-2.jpg" alt="Вид на каньон с радугой." width="300" height="212">
             </a>
-            <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 5000 ₽</span></p>
+            <p class="hotels__item-cost">
+              <span>Гостиница</span>
+              <span class="hotels__item-price">От 5000 ₽</span>
+            </p>
             <p class="hotels__item-wrap">
               <a class="hotels__item-link button details-button" href="#">Подробнее</a>
               <button class="hotels__item-button button favorite-button favorite-button-checked" type="button">В избранном</button>
@@ -212,7 +223,10 @@
             <a class="hotels__image-link" href="#">
               <img class="hotels__image" src="images/hotel-3.jpg" alt="Вид на каньон на рассвете." width="300" height="212">
             </a>
-            <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 2500 ₽</span></p>
+            <p class="hotels__item-cost">
+              <span>Гостиница</span>
+              <span class="hotels__item-price">От 2500 ₽</span>
+            </p>
             <p class="hotels__item-wrap">
               <a class="hotels__item-link button details-button" href="#">Подробнее</a>
               <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
@@ -231,7 +245,10 @@
             <a class="hotels__image-link" href="#">
               <img class="hotels__image" src="images/hotel-4.jpg" alt="Каньон на фоне звёздного неба." width="300" height="212">
             </a>
-            <p class="hotels__item-cost">Гостиница <span class="hotels__item-price">От 1500 ₽</span></p>
+            <p class="hotels__item-cost">
+              <span>Гостиница</span>
+              <span class="hotels__item-price">От 1500 ₽</span>
+            </p>
             <p class="hotels__item-wrap">
               <a class="hotels__item-link button details-button" href="#">Подробнее</a>
               <button class="hotels__item-button button favorite-button" type="button">В избранное</button>
@@ -300,5 +317,61 @@
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </footer>
+    <div class="modal-closed">
+      <div class="modal-booking modal-container">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="booking__field-group">
+              <label class="booking-form__label" for="arrival-date">Дата заезда:</label>
+              <input class="booking-form__date" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <span class="booking-message booking-message-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="booking__field-group">
+              <label class="booking-form__label" for="departure-date">Дата выезда:</label>
+              <input class="booking-form__date" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату">
+              <span class="booking-message">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="booking__age">
+              <div class="booking__age-wrapper">
+                <label class="booking-form__age-label booking-form__adult-label" for="adult">Взрослые:</label>
+                <div class="booking-form__age-input">
+                  <button class="booking-form__button booking-form__remove-button" type="button">
+                    <span class="visually-hidden">Добавить гостя</span>
+                  </button>
+                  <input class="booking-form__age" type="number" id="adult" name="adult" placeholder="2">
+                  <button class="booking-form__button booking-form__add-button" type="button">
+                    <span class="visually-hidden">Убрать гостя</span>
+                  </button>
+                </div>
+              </div>
+              <div class="booking__age-wrapper">
+                <span class="booking-form__kids-label form-label-icon">
+                  <label class="booking-form__age-label booking-form__kids-label" for="kids">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle"aria-labelledby="tooltip-label-date" type="button"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="booking-form__age-input">
+                  <button class="booking-form__button booking-form__remove-button" type="button">
+                    <span class="visually-hidden">Добавить гостя</span>
+                  </button>
+                  <input class="booking-form__age" type="number" id="kids" name="kids" placeholder="2">
+                  <button class="booking-form__button booking-form__add-button" type="button">
+                    <span class="visually-hidden">Убрать гостя</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="booking__submit-button button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
