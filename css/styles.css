@@ -577,10 +577,6 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-/* .copyright:focus .copyright__logo {
-  fill: #756157;
-} */
-
 .copyright__logo {
   padding-top: 4px;
   fill: #000000;
